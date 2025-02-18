@@ -1,0 +1,22 @@
+[tool.poetry]
+package-mode = false
+packages = [
+    { include = "app" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+annofabapi = "^1.2"
+fastapi = "^0.115"
+uvicorn = "^0.34"
+
+[tool.poetry.group.linter.dependencies]
+ruff = "^0.9"
+mypy = "^1"
+types-requests = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
